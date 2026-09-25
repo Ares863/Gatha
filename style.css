@@ -673,16 +673,16 @@ section p {
 /* BOTÃO WHATSAPP */
 .btn-whatsapp {
     margin-top: 20px;
-    background-color: #25d366;
-    border-color: #25d366;
+    background-color: #ad11b2;
+    border-color: #ad11b2;
     color: #ffffff;
     font-weight: bold;
     display: inline-block;
 }
 
 .btn-whatsapp:hover {
-    background-color: #1ebc57;
-    border-color: #1ebc57;
+    background-color: #500963;
+    border-color: #500963;
     color: #ffffff;
     box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
 }
