@@ -51,14 +51,22 @@ const resposta = document.querySelector("#resposta");
 
 if (botaoSim && resposta) {
     botaoSim.addEventListener("click", function () {
-        resposta.textContent =
-            "Então talvez a nossa história ainda não tenha terminado.";
+        resposta.innerHTML = `
+            <p><strong>Então essa história continua...</strong> ♡</p>
+            <p style="font-size: 16px; margin-top: 10px; color: #d8c8ce;">
+                Obrigado por me dar essa chance. Me manda uma mensagem quando puder pra gente conversar.
+            </p>
+        `;
     });
 }
 
 if (botaoNao && resposta) {
     botaoNao.addEventListener("click", function () {
-        resposta.textContent =
-            "Tudo bem. Obrigado por ter lido até aqui.";
+        resposta.innerHTML = `
+            <p><strong>Tudo bem...</strong></p>
+            <p style="font-size: 16px; margin-top: 10px; color: #d8c8ce;">
+                Obrigado por ter lido até aqui e por ter feito parte da minha vida. Eu realmente desejo o melhor pra você.
+            </p>
+        `;
     });
 }
