@@ -669,3 +669,20 @@ section p {
         font-size: 23px !important;
     }
 }
+
+/* BOTÃO WHATSAPP */
+.btn-whatsapp {
+    margin-top: 20px;
+    background-color: #25d366;
+    border-color: #25d366;
+    color: #ffffff;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebc57;
+    border-color: #1ebc57;
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+}
