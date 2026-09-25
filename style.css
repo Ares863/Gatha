@@ -1,0 +1,620 @@
+/* ================================
+   RESET / CONFIGURAÇÕES GERAIS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Georgia", "Times New Roman", serif;
+    background: #120b10;
+    color: #f7e9ed;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ================================
+   NAVEGAÇÃO
+================================ */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    background: rgba(18, 11, 16, 0.88);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    z-index: 1000;
+}
+
+nav a {
+    position: relative;
+
+    color: #d9c5cb;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: #e9a6b8;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ================================
+   SEÇÕES GERAIS
+================================ */
+
+section {
+    min-height: 100vh;
+    padding: 120px 10% 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+}
+
+section h1,
+section h2 {
+    margin-bottom: 25px;
+}
+
+section h1 {
+    font-size: clamp(45px, 7vw, 90px);
+    font-weight: 400;
+    letter-spacing: -2px;
+}
+
+section h2 {
+    font-size: clamp(32px, 5vw, 55px);
+    font-weight: 400;
+}
+
+section p {
+    max-width: 700px;
+    color: #d8c8ce;
+    font-size: 18px;
+}
+
+
+/* ================================
+   INÍCIO
+================================ */
+
+#inicio {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(123, 43, 67, 0.35),
+            transparent 55%),
+        #120b10;
+}
+
+#inicio::before {
+    content: "♡";
+
+    position: absolute;
+    top: 18%;
+    left: 10%;
+
+    font-size: 80px;
+    color: rgba(233, 166, 184, 0.08);
+
+    animation: flutuar 5s ease-in-out infinite;
+}
+
+#inicio::after {
+    content: "♡";
+
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+
+    font-size: 100px;
+    color: rgba(233, 166, 184, 0.06);
+
+    animation: flutuar 6s ease-in-out infinite reverse;
+}
+
+#inicio h1 {
+    color: #fff4f7;
+}
+
+#inicio p {
+    margin-bottom: 35px;
+}
+
+
+/* ================================
+   BOTÕES
+================================ */
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    border: 1px solid #d9879f;
+    border-radius: 50px;
+
+    background: transparent;
+    color: #f7dce4;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #d9879f;
+    color: #120b10;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 30px rgba(217, 135, 159, 0.25);
+}
+
+
+/* ================================
+   POR QUE FIZ ISSO
+================================ */
+
+#motivo {
+    background: #180e14;
+}
+
+#motivo p {
+    font-size: 20px;
+    max-width: 750px;
+}
+
+
+/* ================================
+   MEMÓRIAS
+================================ */
+
+#memorias {
+    background: #120b10;
+}
+
+.memoria-container {
+    width: 100%;
+    max-width: 1000px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+.memoria {
+    padding: 30px 25px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+
+    transition: 0.35s ease;
+}
+
+.memoria:hover {
+    transform: translateY(-8px);
+
+    background: rgba(217, 135, 159, 0.08);
+
+    border-color: rgba(217, 135, 159, 0.35);
+}
+
+.memoria h3 {
+    margin-bottom: 10px;
+
+    color: #efb0c1;
+
+    font-size: 22px;
+}
+
+.memoria p {
+    font-size: 15px;
+}
+
+
+/* ================================
+   FOTOS
+================================ */
+
+.galeria {
+    width: 100%;
+    max-width: 1000px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+
+    margin-top: 40px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    filter: brightness(0.85);
+
+    transition: 0.4s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.03);
+
+    filter: brightness(1);
+}
+
+
+/* ================================
+   O QUE ADMIRO
+================================ */
+
+#admiro {
+    background:
+        linear-gradient(rgba(18, 11, 16, 0.85),
+            rgba(18, 11, 16, 0.95)),
+        #120b10;
+}
+
+.admiracao-container {
+    max-width: 850px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    margin-top: 30px;
+}
+
+.admiracao {
+    padding: 22px 30px;
+
+    border-left: 2px solid #d9879f;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    text-align: left;
+
+    transition: 0.3s ease;
+}
+
+.admiracao:hover {
+    transform: translateX(8px);
+
+    background: rgba(217, 135, 159, 0.07);
+}
+
+.admiracao h3 {
+    margin-bottom: 5px;
+
+    color: #efb0c1;
+}
+
+
+/* ================================
+   CARTA
+================================ */
+
+#carta {
+    background: #f4e9e3;
+    color: #24151b;
+}
+
+#carta h2 {
+    color: #3a2029;
+}
+
+.carta {
+    width: 100%;
+    max-width: 750px;
+
+    padding: 60px;
+
+    background: #fffaf6;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.25);
+
+    text-align: left;
+
+    position: relative;
+}
+
+.carta::before {
+    content: "♡";
+
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    color: #d9879f;
+
+    font-size: 30px;
+}
+
+.carta p {
+    color: #4c3b41;
+
+    font-size: 18px;
+    line-height: 2;
+
+    margin-bottom: 20px;
+}
+
+.carta .assinatura {
+    margin-top: 40px;
+
+    text-align: right;
+
+    font-style: italic;
+    color: #8b5666;
+}
+
+
+/* ================================
+   FINAL
+================================ */
+
+#final {
+    background:
+        radial-gradient(circle,
+            rgba(123, 43, 67, 0.35),
+            transparent 60%),
+        #120b10;
+}
+
+#final h2 {
+    color: #fff4f7;
+}
+
+#final p {
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   DIVISOR
+================================ */
+
+.divisor {
+    width: 70px;
+    height: 1px;
+
+    margin: 15px auto 30px;
+
+    background: #d9879f;
+}
+
+
+/* ================================
+   ANIMAÇÕES
+================================ */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+section h1,
+section h2,
+section p {
+    animation: aparecer 1s ease both;
+}
+
+
+/* ================================
+   SCROLLBAR
+================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #120b10;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #71384b;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d9879f;
+}
+
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 800px) {
+
+    nav {
+        height: auto;
+        min-height: 65px;
+
+        padding: 15px 20px;
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 110px 7% 70px;
+    }
+
+    .memoria-container {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria img {
+        height: 250px;
+    }
+
+    .carta {
+        padding: 35px 25px;
+    }
+
+    .carta p {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    section h1 {
+        font-size: 48px;
+    }
+
+    section h2 {
+        font-size: 35px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+
+    .carta {
+        padding: 30px 20px;
+    }
+}
+
+.pergunta-final {
+    margin-top: 50px;
+    text-align: center;
+
+    font-size: 28px !important;
+    font-weight: bold;
+
+    color: #8b3f57 !important;
+}
+
+.assinatura {
+    margin-top: 45px !important;
+}
+
+@media (max-width: 500px) {
+
+    .carta {
+        width: 100%;
+        padding: 30px 22px;
+    }
+
+    .carta p {
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    .pergunta-final {
+        font-size: 23px !important;
+    }
+}
