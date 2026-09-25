@@ -105,6 +105,14 @@ section {
     text-align: center;
 
     position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visivel {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 section h1,
@@ -411,12 +419,22 @@ section p {
 }
 
 .carta .assinatura {
-    margin-top: 40px;
+    margin-top: 45px !important;
 
     text-align: right;
 
     font-style: italic;
     color: #8b5666;
+}
+
+.pergunta-final {
+    margin-top: 50px;
+    text-align: center;
+
+    font-size: 28px !important;
+    font-weight: bold;
+
+    color: #8b3f57 !important;
 }
 
 
@@ -438,6 +456,60 @@ section p {
 
 #final p {
     margin-bottom: 30px;
+}
+
+
+/* ================================
+   INTERAÇÃO FINAL (BOTÕES)
+================================ */
+
+.interacao-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.pergunta-interacao {
+    font-size: 18px;
+    color: #efb0c1;
+
+    margin-bottom: 10px !important;
+}
+
+.botoes-resposta {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-resposta {
+    font-size: 15px;
+    padding: 12px 28px;
+}
+
+.btn-secundario {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #d9c5cb;
+}
+
+.btn-secundario:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: none;
+}
+
+.resposta-mensagem {
+    margin-top: 20px;
+    font-size: 20px;
+    font-style: italic;
+    color: #fff4f7;
+    max-width: 600px;
+    min-height: 50px;
+    transition: all 0.5s ease;
 }
 
 
@@ -584,27 +656,6 @@ section p {
     }
 
     .carta {
-        padding: 30px 20px;
-    }
-}
-
-.pergunta-final {
-    margin-top: 50px;
-    text-align: center;
-
-    font-size: 28px !important;
-    font-weight: bold;
-
-    color: #8b3f57 !important;
-}
-
-.assinatura {
-    margin-top: 45px !important;
-}
-
-@media (max-width: 500px) {
-
-    .carta {
         width: 100%;
         padding: 30px 22px;
     }
@@ -617,15 +668,4 @@ section p {
     .pergunta-final {
         font-size: 23px !important;
     }
-}
-
-section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-section.visivel {
-    opacity: 1;
-    transform: translateY(0);
 }
